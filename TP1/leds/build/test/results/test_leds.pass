@@ -1,0 +1,62 @@
+---
+:source:
+  :path: test
+  :file: test_leds.c
+:successes:
+- :test: test_todos_los_leds_inicial_apagados
+  :line: 15
+  :message: ''
+  :unity_test_time: 0
+- :test: test_prender_un_led
+  :line: 22
+  :message: ''
+  :unity_test_time: 0
+- :test: test_prender_y_apagar_un_led
+  :line: 31
+  :message: ''
+  :unity_test_time: 0
+- :test: test_prender_y_apagar_varios_leds
+  :line: 38
+  :message: ''
+  :unity_test_time: 0
+- :test: test_leer_un_led_prendido
+  :line: 49
+  :message: ''
+  :unity_test_time: 0
+- :test: test_leer_un_led_apagado
+  :line: 57
+  :message: ''
+  :unity_test_time: 0
+- :test: test_encender_todos_los_leds
+  :line: 65
+  :message: ''
+  :unity_test_time: 0
+- :test: test_apagar_todos_los_leds
+  :line: 72
+  :message: ''
+  :unity_test_time: 0
+- :test: test_ok_prender_led
+  :line: 80
+  :message: ''
+  :unity_test_time: 0
+- :test: test_error_prender_led
+  :line: 86
+  :message: ''
+  :unity_test_time: 0
+- :test: test_ok_apagar_led
+  :line: 93
+  :message: ''
+  :unity_test_time: 0
+- :test: test_error_apagar_led
+  :line: 99
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 12
+  :passed: 12
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.0009312550000686315
