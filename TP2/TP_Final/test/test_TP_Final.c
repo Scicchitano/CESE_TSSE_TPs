@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-
+#define HORA_DENTRO_HORARIO_LABORAL 15
+#define HORA_FUERA_HORARIO_LABORAL 3
 uint8_t MAX_TIME_OPEN_DOOR_SEG = 2;
 uint8_t FICHADAS_PENDIENTES = 0;
 //La funcion que prende todos, no deberia recibir argumentos ni deberia tener mascaras
@@ -69,26 +70,27 @@ void test_TAG_invalido(void){
 
 
 /*Se valida si nos encontramos fuera o dentro del horario laboral para resetear el modem. En este caso se setea un horario fuera de horario laboral por lo cual se aprovecha para reiniciar el modem*/
-/*void test_reset_modem(void){
+void test_reset_modem(void){
     time_t now;
     time(&now);
     struct tm *local = localtime(&now);
+    local->tm_hour = HORA_FUERA_HORARIO_LABORAL;
 
     TEST_ASSERT_EQUAL(1,Check_Reset_Modem(local));
-}*/
+}
 
 
 
 
 /*Se valida si nos encontramos fuera o dentro del horario laboral para resetear el modem. En este caso se setea un horario dentro del horario laboral por lo cual no es conveniente reiniciar el modem*/
-/*void test_no_reset_modem(void){
+void test_no_reset_modem(void){
     time_t now;
     time(&now);
     struct tm *local = localtime(&now);
-    local->tm_hour = 1;
+    local->tm_hour = HORA_DENTRO_HORARIO_LABORAL;
 
     TEST_ASSERT_EQUAL(0,Check_Reset_Modem(local));
-}*/
+}
 
 
 

@@ -4,43 +4,47 @@
   :file: test_TP_Final.c
 :successes:
 - :test: test_disparar_alarma
-  :line: 18
+  :line: 19
   :message: ''
   :unity_test_time: 0
 - :test: test_no_disparar_alarma
-  :line: 30
+  :line: 31
   :message: ''
   :unity_test_time: 0
 - :test: test_TAG_valido
-  :line: 42
+  :line: 43
   :message: ''
   :unity_test_time: 0
 - :test: test_TAG_invalido
-  :line: 49
+  :line: 50
+  :message: ''
+  :unity_test_time: 0
+- :test: test_reset_modem
+  :line: 73
+  :message: ''
+  :unity_test_time: 0
+- :test: test_no_reset_modem
+  :line: 86
   :message: ''
   :unity_test_time: 0
 :failures: []
 :ignores: []
 :counts:
-  :total: 4
-  :passed: 4
+  :total: 6
+  :passed: 6
   :failed: 0
   :ignored: 0
 :stdout:
-- Today is Wed May 24 20:19:23 2023
-- Last is Wed May 24 20:19:23 2023
-- Now is Wed May 24 20:19:26 2023
+- Today is Wed May 24 20:24:41 2023
+- Last is Wed May 24 20:24:41 2023
+- Now is Wed May 24 20:24:44 2023
 - Difference is 3
-- Today is Wed May 24 20:19:26 2023
-- Last is Wed May 24 20:19:26 2023
-- Now is Wed May 24 20:19:27 2023
+- Today is Wed May 24 20:24:44 2023
+- Last is Wed May 24 20:24:44 2023
+- Now is Wed May 24 20:24:45 2023
 - Difference is 1
-- TAG_INVALIDTAG_VALIDO - else
-- TAG_VALIDO2 - else
-- TAG_VALIDO3 - else
-- TAG_VALIDO4 - else
-- TAG_VALIDO5 - else
-- TAG_VALIDO6 - else
-- TAG_VALIDO2TAG_VALIDO - else
-- TAG_VALIDO2 - if
-:time: 4.001839941000071
+- TAG_INVALID
+- TAG_VALIDO2
+- 'hora : 3'
+- 'hora : 15'
+:time: 4.002260745000058

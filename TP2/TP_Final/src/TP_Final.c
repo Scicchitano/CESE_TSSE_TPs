@@ -65,13 +65,13 @@ uint8_t Check_TAG(char *readTAG){
         printf("\n");*/
         if (strcmp(BBDD[x],readTAG) == 0)
         {
-            printf(BBDD[x]);
-            printf(" - if\n");
+            /*printf(BBDD[x]);
+            printf(" - if\n");*/
             TAGValido = 1;
             return TAGValido;
         }else{
-            printf(BBDD[x]);
-            printf(" - else\n");
+            /*printf(BBDD[x]);
+            printf(" - else\n");*/
             TAGValido = 0;
         }
 
