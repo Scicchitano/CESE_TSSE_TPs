@@ -1,0 +1,67 @@
+---
+:source:
+  :path: test
+  :file: test_TP_Final.c
+:successes:
+- :test: test_disparar_alarma
+  :line: 18
+  :message: ''
+  :unity_test_time: 0
+- :test: test_no_disparar_alarma
+  :line: 30
+  :message: ''
+  :unity_test_time: 0
+- :test: test_TAG_valido
+  :line: 42
+  :message: ''
+  :unity_test_time: 0
+- :test: test_TAG_invalido
+  :line: 49
+  :message: ''
+  :unity_test_time: 0
+- :test: test_reset_modem
+  :line: 57
+  :message: ''
+  :unity_test_time: 0
+- :test: test_no_reset_modem
+  :line: 70
+  :message: ''
+  :unity_test_time: 0
+- :test: test_contar_intruso_pendiente
+  :line: 81
+  :message: ''
+  :unity_test_time: 0
+- :test: test_agregar_intruso_pendiente
+  :line: 100
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 8
+  :passed: 8
+  :failed: 0
+  :ignored: 0
+:stdout:
+- Today is Thu May 25 14:17:31 2023
+- Last is Thu May 25 14:17:31 2023
+- Now is Thu May 25 14:17:34 2023
+- Difference is 3
+- Today is Thu May 25 14:17:34 2023
+- Last is Thu May 25 14:17:34 2023
+- Now is Thu May 25 14:17:35 2023
+- Difference is 1
+- TAG_INVALID
+- TAG_VALIDO2
+- 'hora : 3'
+- 'hora : 15'
+- 'Se envio el intruso 84 '
+- 'Se envio el intruso 184 '
+- 'Se envio el intruso 744 '
+- ''
+- 'Se envio el intruso 1685038655 '
+- 'Se envio el intruso 1685038655 '
+- 'Se envio el intruso 1685038655 '
+- 'Se envio el intruso 1685038655 '
+- 'Se envio el intruso 1685038655 '
+:time: 4.001671485999395

@@ -7,6 +7,8 @@
 #define MAXIMA_LONGITUD_BBDD 12
 
 
+
+extern MAXIMA_LONGITUD_INTRUSOS;
 extern MAX_TIME_OPEN_DOOR_SEG;
 
 char BBDD[][MAXIMA_LONGITUD_BBDD] = {"TAG_VALIDO", "TAG_VALIDO2", "TAG_VALIDO3", "TAG_VALIDO4", "TAG_VALIDO5", "TAG_VALIDO6"};
@@ -79,6 +81,54 @@ uint8_t Check_TAG(char *readTAG){
 	return TAGValido;
 }
 
+
+void send(uint32_t intruso){
+	printf("Se envio el intruso %d \n",intruso);
+}
+
+
+
+uint8_t send_intruso(uint32_t intrusos[]){
+	uint8_t cantidad = 0;
+	for (uint8_t i = 0; i < MAXIMA_LONGITUD_INTRUSOS; i++)
+	{
+		if (intrusos[i])
+		{
+			send(intrusos[i]);
+			intrusos[i] = 0;
+			cantidad++;
+		}else{
+			break;
+		}
+		
+	}
+	return cantidad;
+	
+}
+
+
+
+
+
+
+
+
+void add_intruso(uint32_t intrusos[], uint8_t cantidad){
+	if (cantidad > MAXIMA_LONGITUD_INTRUSOS)
+	{
+		cantidad = MAXIMA_LONGITUD_INTRUSOS;
+	}
+	
+	for(int x = 0; x < cantidad; x++){
+        intrusos[x] = time(NULL);
+    }
+	/*for(int i = 0; i < MAXIMA_LONGITUD_INTRUSOS; i++){
+		printf("%d - ",intrusos[i]);
+	}*/
+	printf("\n");
+
+
+}
 
 
 

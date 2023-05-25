@@ -16,6 +16,8 @@ extern void test_TAG_valido(void);
 extern void test_TAG_invalido(void);
 extern void test_reset_modem(void);
 extern void test_no_reset_modem(void);
+extern void test_contar_intruso_pendiente(void);
+extern void test_agregar_intruso_pendiente(void);
 
 
 /*=======Mock Management=====*/
@@ -86,12 +88,14 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
 int main(void)
 {
   UnityBegin("test_TP_Final.c");
-  run_test(test_disparar_alarma, "test_disparar_alarma", 19);
-  run_test(test_no_disparar_alarma, "test_no_disparar_alarma", 31);
-  run_test(test_TAG_valido, "test_TAG_valido", 43);
-  run_test(test_TAG_invalido, "test_TAG_invalido", 50);
-  run_test(test_reset_modem, "test_reset_modem", 73);
-  run_test(test_no_reset_modem, "test_no_reset_modem", 86);
+  run_test(test_disparar_alarma, "test_disparar_alarma", 18);
+  run_test(test_no_disparar_alarma, "test_no_disparar_alarma", 30);
+  run_test(test_TAG_valido, "test_TAG_valido", 42);
+  run_test(test_TAG_invalido, "test_TAG_invalido", 49);
+  run_test(test_reset_modem, "test_reset_modem", 57);
+  run_test(test_no_reset_modem, "test_no_reset_modem", 70);
+  run_test(test_contar_intruso_pendiente, "test_contar_intruso_pendiente", 81);
+  run_test(test_agregar_intruso_pendiente, "test_agregar_intruso_pendiente", 100);
 
   return UnityEnd();
 }

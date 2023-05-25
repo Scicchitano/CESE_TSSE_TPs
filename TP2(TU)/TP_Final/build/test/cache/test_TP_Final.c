@@ -10,9 +10,23 @@
 
 
 
+
+
+uint8_t MAXIMA_LONGITUD_INTRUSOS = 20;
+
 uint8_t MAX_TIME_OPEN_DOOR_SEG = 2;
 
 uint8_t FICHADAS_PENDIENTES = 0;
+
+
+
+
+
+
+
+
+
+
 
 void test_disparar_alarma(void){
 
@@ -28,7 +42,7 @@ void test_disparar_alarma(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(24), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(23), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -56,7 +70,7 @@ void test_no_disparar_alarma(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(36), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(35), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -78,7 +92,7 @@ void test_TAG_valido(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(45), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(44), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -96,9 +110,17 @@ void test_TAG_invalido(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(52), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(51), UNITY_DISPLAY_STYLE_INT);
 
 }
+
+
+
+
+
+
+
+
 
 void test_reset_modem(void){
 
@@ -116,7 +138,7 @@ void test_reset_modem(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(79), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(63), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -146,6 +168,84 @@ void test_no_reset_modem(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(92), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(76), UNITY_DISPLAY_STYLE_INT);
+
+}
+
+
+
+
+
+
+
+void test_contar_intruso_pendiente(void){
+
+    uint8_t cantidad = 0;
+
+    uint32_t vector_intrusos[MAXIMA_LONGITUD_INTRUSOS];
+
+    for (uint8_t i = 0; i < MAXIMA_LONGITUD_INTRUSOS; i++){
+
+        vector_intrusos[i] = 0;
+
+    }
+
+
+
+    vector_intrusos[0] = 84;
+
+    vector_intrusos[1] = 184;
+
+    vector_intrusos[2] = 744;
+
+
+
+    cantidad = send_intruso(vector_intrusos);
+
+
+
+    UnityAssertEqualNumber((UNITY_INT)((3)), (UNITY_INT)((cantidad)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(94), UNITY_DISPLAY_STYLE_INT);
+
+}
+
+
+
+
+
+
+
+
+
+void test_agregar_intruso_pendiente(void){
+
+    uint8_t cantidad_intrusos_llamados = 5;
+
+    uint8_t cantidad = 0;
+
+    uint32_t vector_intrusos[MAXIMA_LONGITUD_INTRUSOS];
+
+    for (uint8_t i = 0; i < MAXIMA_LONGITUD_INTRUSOS; i++){
+
+        vector_intrusos[i] = 0;
+
+    }
+
+    add_intruso(vector_intrusos,cantidad_intrusos_llamados);
+
+
+
+    cantidad = send_intruso(vector_intrusos);
+
+
+
+    UnityAssertEqualNumber((UNITY_INT)((cantidad_intrusos_llamados)), (UNITY_INT)((cantidad)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(111), UNITY_DISPLAY_STYLE_INT);
 
 }
