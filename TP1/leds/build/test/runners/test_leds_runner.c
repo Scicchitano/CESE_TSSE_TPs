@@ -89,18 +89,18 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
 int main(void)
 {
   UnityBegin("test_leds.c");
-  run_test(test_todos_los_leds_inicial_apagados, "test_todos_los_leds_inicial_apagados", 15);
-  run_test(test_prender_un_led, "test_prender_un_led", 22);
-  run_test(test_prender_y_apagar_un_led, "test_prender_y_apagar_un_led", 31);
-  run_test(test_prender_y_apagar_varios_leds, "test_prender_y_apagar_varios_leds", 38);
-  run_test(test_leer_un_led_prendido, "test_leer_un_led_prendido", 49);
-  run_test(test_leer_un_led_apagado, "test_leer_un_led_apagado", 57);
-  run_test(test_encender_todos_los_leds, "test_encender_todos_los_leds", 65);
-  run_test(test_apagar_todos_los_leds, "test_apagar_todos_los_leds", 72);
-  run_test(test_ok_prender_led, "test_ok_prender_led", 80);
-  run_test(test_error_prender_led, "test_error_prender_led", 86);
-  run_test(test_ok_apagar_led, "test_ok_apagar_led", 93);
-  run_test(test_error_apagar_led, "test_error_apagar_led", 99);
+  run_test(test_todos_los_leds_inicial_apagados, "test_todos_los_leds_inicial_apagados", 19);
+  run_test(test_prender_un_led, "test_prender_un_led", 27);
+  run_test(test_prender_y_apagar_un_led, "test_prender_y_apagar_un_led", 35);
+  run_test(test_prender_y_apagar_varios_leds, "test_prender_y_apagar_varios_leds", 42);
+  run_test(test_leer_un_led_prendido, "test_leer_un_led_prendido", 52);
+  run_test(test_leer_un_led_apagado, "test_leer_un_led_apagado", 59);
+  run_test(test_encender_todos_los_leds, "test_encender_todos_los_leds", 67);
+  run_test(test_apagar_todos_los_leds, "test_apagar_todos_los_leds", 74);
+  run_test(test_ok_prender_led, "test_ok_prender_led", 82);
+  run_test(test_error_prender_led, "test_error_prender_led", 88);
+  run_test(test_ok_apagar_led, "test_ok_apagar_led", 94);
+  run_test(test_error_apagar_led, "test_error_apagar_led", 100);
 
   return UnityEnd();
 }

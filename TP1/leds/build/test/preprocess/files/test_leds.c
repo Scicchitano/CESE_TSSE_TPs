@@ -1,22 +1,12 @@
 #include "src/leds.h"
 #include "/var/lib/gems/3.0.0/gems/ceedling-0.31.1/vendor/unity/src/unity.h"
+static uint16_t *puerto_virtual;
 
 
 
+void setUp(void)
 
-
-
-
-
-
-
-
-
-static uint16_t * puerto_virtual;
-
-
-
-void setUp(void){
+{
 
     ledsInit(&puerto_virtual);
 
@@ -24,9 +14,11 @@ void setUp(void){
 
 
 
-void test_todos_los_leds_inicial_apagados(void){
+void test_todos_los_leds_inicial_apagados(void)
 
-    puerto_virtual=0xFFFF;
+{
+
+    puerto_virtual = 0xFFFF;
 
     ledsInit(&puerto_virtual);
 
@@ -34,7 +26,7 @@ void test_todos_los_leds_inicial_apagados(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(18), UNITY_DISPLAY_STYLE_HEX16);
+   ), (UNITY_UINT)(23), UNITY_DISPLAY_STYLE_HEX16);
 
 }
 
@@ -42,9 +34,9 @@ void test_todos_los_leds_inicial_apagados(void){
 
 
 
-void test_prender_un_led(void){
+void test_prender_un_led(void)
 
-
+{
 
     ledsTurnOnSingle(2);
 
@@ -54,7 +46,7 @@ void test_prender_un_led(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(26), UNITY_DISPLAY_STYLE_HEX16);
+   ), (UNITY_UINT)(31), UNITY_DISPLAY_STYLE_HEX16);
 
 }
 
@@ -62,11 +54,9 @@ void test_prender_un_led(void){
 
 
 
+void test_prender_y_apagar_un_led(void)
 
-
-void test_prender_y_apagar_un_led(void){
-
-
+{
 
     ledsTurnOnSingle(2);
 
@@ -74,7 +64,7 @@ void test_prender_y_apagar_un_led(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(34), UNITY_DISPLAY_STYLE_HEX16);
+   ), (UNITY_UINT)(38), UNITY_DISPLAY_STYLE_HEX16);
 
 }
 
@@ -82,9 +72,9 @@ void test_prender_y_apagar_un_led(void){
 
 
 
-void test_prender_y_apagar_varios_leds(void){
+void test_prender_y_apagar_varios_leds(void)
 
-
+{
 
     ledsTurnOnSingle(3);
 
@@ -98,7 +88,7 @@ void test_prender_y_apagar_varios_leds(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(44), UNITY_DISPLAY_STYLE_HEX16);
+   ), (UNITY_UINT)(48), UNITY_DISPLAY_STYLE_HEX16);
 
 }
 
@@ -106,11 +96,9 @@ void test_prender_y_apagar_varios_leds(void){
 
 
 
+void test_leer_un_led_prendido(void)
 
-
-void test_leer_un_led_prendido(void){
-
-    setUp();
+{
 
     ledsTurnOnSingle(3);
 
@@ -118,9 +106,7 @@ void test_leer_un_led_prendido(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(52), UNITY_DISPLAY_STYLE_INT);
-
-
+   ), (UNITY_UINT)(55), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -128,9 +114,9 @@ void test_leer_un_led_prendido(void){
 
 
 
-void test_leer_un_led_apagado(void){
+void test_leer_un_led_apagado(void)
 
-    setUp();
+{
 
     ledsTurnOnSingle(3);
 
@@ -140,7 +126,7 @@ void test_leer_un_led_apagado(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(61), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(63), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -148,9 +134,9 @@ void test_leer_un_led_apagado(void){
 
 
 
-void test_encender_todos_los_leds(void){
+void test_encender_todos_los_leds(void)
 
-    setUp();
+{
 
     ledsTurnOnAll();
 
@@ -158,7 +144,7 @@ void test_encender_todos_los_leds(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(68), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(70), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -166,9 +152,9 @@ void test_encender_todos_los_leds(void){
 
 
 
-void test_apagar_todos_los_leds(void){
+void test_apagar_todos_los_leds(void)
 
-    setUp();
+{
 
     ledsTurnOnAll();
 
@@ -178,7 +164,7 @@ void test_apagar_todos_los_leds(void){
 
    ((void *)0)
 
-   ), (UNITY_UINT)(76), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(78), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -186,15 +172,15 @@ void test_apagar_todos_los_leds(void){
 
 
 
-void test_ok_prender_led(void){
+void test_ok_prender_led(void)
 
-    setUp();
+{
 
     UnityAssertEqualNumber((UNITY_INT)((1)), (UNITY_INT)((ledsTurnOnSingle(3))), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(82), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(84), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -202,15 +188,15 @@ void test_ok_prender_led(void){
 
 
 
-void test_error_prender_led(void){
+void test_error_prender_led(void)
 
-    setUp();
+{
 
     UnityAssertEqualNumber((UNITY_INT)((0)), (UNITY_INT)((ledsTurnOnSingle(18))), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(88), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(90), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -218,17 +204,15 @@ void test_error_prender_led(void){
 
 
 
+void test_ok_apagar_led(void)
 
-
-void test_ok_apagar_led(void){
-
-    setUp();
+{
 
     UnityAssertEqualNumber((UNITY_INT)((1)), (UNITY_INT)((ledsTurnOffSingle(3))), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(95), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(96), UNITY_DISPLAY_STYLE_INT);
 
 }
 
@@ -236,14 +220,14 @@ void test_ok_apagar_led(void){
 
 
 
-void test_error_apagar_led(void){
+void test_error_apagar_led(void)
 
-    setUp();
+{
 
     UnityAssertEqualNumber((UNITY_INT)((0)), (UNITY_INT)((ledsTurnOffSingle(-7))), (
 
    ((void *)0)
 
-   ), (UNITY_UINT)(101), UNITY_DISPLAY_STYLE_INT);
+   ), (UNITY_UINT)(102), UNITY_DISPLAY_STYLE_INT);
 
 }
