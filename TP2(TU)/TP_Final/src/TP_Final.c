@@ -35,10 +35,6 @@ uint8_t Check_Puerta(uint8_t state, time_t last_open_door){
 }
 
 
-
-
-
-
 uint8_t Check_Reset_Modem(struct tm *now){
     uint8_t hours, resetModem;
     
@@ -55,7 +51,6 @@ uint8_t Check_Reset_Modem(struct tm *now){
 	}
 	return resetModem;
 }
-
 
 
 uint8_t Check_TAG(char *readTAG){
@@ -87,7 +82,6 @@ void send(uint32_t intruso){
 }
 
 
-
 uint8_t send_intruso(uint32_t intrusos[]){
 	uint8_t cantidad = 0;
 	for (uint8_t i = 0; i < MAXIMA_LONGITUD_INTRUSOS; i++)
@@ -105,12 +99,6 @@ uint8_t send_intruso(uint32_t intrusos[]){
 	return cantidad;
 	
 }
-
-
-
-
-
-
 
 
 void add_intruso(uint32_t intrusos[], uint8_t cantidad){
