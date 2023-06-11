@@ -13,3 +13,9 @@ void send(uint32_t intruso);
 uint8_t send_intruso(uint32_t intrusos[]);
 
 void add_intruso(uint32_t intrusos[], uint8_t cantidad);
+
+int Filtro(float data[6]);
+
+void hexToString(int data, char hexString[]);
+
+void receivedData(uint8_t* data, uint8_t bits,char hexString[16]);

@@ -4,64 +4,67 @@
   :file: test_TP_Final.c
 :successes:
 - :test: test_disparar_alarma
-  :line: 18
+  :line: 35
   :message: ''
   :unity_test_time: 0
 - :test: test_no_disparar_alarma
-  :line: 30
+  :line: 46
   :message: ''
   :unity_test_time: 0
 - :test: test_TAG_valido
-  :line: 42
-  :message: ''
-  :unity_test_time: 0
-- :test: test_TAG_invalido
-  :line: 49
-  :message: ''
-  :unity_test_time: 0
-- :test: test_reset_modem
   :line: 57
   :message: ''
   :unity_test_time: 0
+- :test: test_TAG_invalido
+  :line: 64
+  :message: ''
+  :unity_test_time: 0
+- :test: test_reset_modem
+  :line: 72
+  :message: ''
+  :unity_test_time: 0
 - :test: test_no_reset_modem
-  :line: 70
+  :line: 85
   :message: ''
   :unity_test_time: 0
 - :test: test_contar_intruso_pendiente
-  :line: 81
+  :line: 96
   :message: ''
   :unity_test_time: 0
 - :test: test_agregar_intruso_pendiente
-  :line: 100
+  :line: 115
+  :message: ''
+  :unity_test_time: 0
+- :test: test_filtro_sensores
+  :line: 138
+  :message: ''
+  :unity_test_time: 0
+- :test: test_comparador_vectores
+  :line: 170
+  :message: ''
+  :unity_test_time: 0
+- :test: test_write_char_display
+  :line: 198
+  :message: ''
+  :unity_test_time: 0
+- :test: test_read_wiegand
+  :line: 238
   :message: ''
   :unity_test_time: 0
 :failures: []
 :ignores: []
 :counts:
-  :total: 8
-  :passed: 8
+  :total: 12
+  :passed: 12
   :failed: 0
   :ignored: 0
 :stdout:
-- Today is Sun May 28 19:38:25 2023
-- Last is Sun May 28 19:38:25 2023
-- Now is Sun May 28 19:38:28 2023
-- Difference is 3
-- Today is Sun May 28 19:38:28 2023
-- Last is Sun May 28 19:38:28 2023
-- Now is Sun May 28 19:38:29 2023
-- Difference is 1
-- TAG_INVALID
-- TAG_VALIDO2
-- 'hora : 3'
-- 'hora : 15'
 - 'Se envio el intruso 84 '
 - 'Se envio el intruso 184 '
 - 'Se envio el intruso 744 '
-- ''
-- 'Se envio el intruso 1685317109 '
-- 'Se envio el intruso 1685317109 '
-- 'Se envio el intruso 1685317109 '
-- 'Se envio el intruso 1685317109 '
-- 'Se envio el intruso 1685317109 '
-:time: 4.0038074070000675
+- 'Se envio el intruso 1686507860 '
+- 'Se envio el intruso 1686507860 '
+- 'Se envio el intruso 1686507860 '
+- 'Se envio el intruso 1686507860 '
+- 'Se envio el intruso 1686507860 '
+:time: 4.001888371999996

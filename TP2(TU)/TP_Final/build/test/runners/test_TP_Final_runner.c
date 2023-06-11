@@ -18,6 +18,10 @@ extern void test_reset_modem(void);
 extern void test_no_reset_modem(void);
 extern void test_contar_intruso_pendiente(void);
 extern void test_agregar_intruso_pendiente(void);
+extern void test_filtro_sensores(void);
+extern void test_comparador_vectores(void);
+extern void test_write_char_display(void);
+extern void test_read_wiegand(void);
 
 
 /*=======Mock Management=====*/
@@ -88,14 +92,18 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
 int main(void)
 {
   UnityBegin("test_TP_Final.c");
-  run_test(test_disparar_alarma, "test_disparar_alarma", 18);
-  run_test(test_no_disparar_alarma, "test_no_disparar_alarma", 30);
-  run_test(test_TAG_valido, "test_TAG_valido", 42);
-  run_test(test_TAG_invalido, "test_TAG_invalido", 49);
-  run_test(test_reset_modem, "test_reset_modem", 57);
-  run_test(test_no_reset_modem, "test_no_reset_modem", 70);
-  run_test(test_contar_intruso_pendiente, "test_contar_intruso_pendiente", 81);
-  run_test(test_agregar_intruso_pendiente, "test_agregar_intruso_pendiente", 100);
+  run_test(test_disparar_alarma, "test_disparar_alarma", 35);
+  run_test(test_no_disparar_alarma, "test_no_disparar_alarma", 46);
+  run_test(test_TAG_valido, "test_TAG_valido", 57);
+  run_test(test_TAG_invalido, "test_TAG_invalido", 64);
+  run_test(test_reset_modem, "test_reset_modem", 72);
+  run_test(test_no_reset_modem, "test_no_reset_modem", 85);
+  run_test(test_contar_intruso_pendiente, "test_contar_intruso_pendiente", 96);
+  run_test(test_agregar_intruso_pendiente, "test_agregar_intruso_pendiente", 115);
+  run_test(test_filtro_sensores, "test_filtro_sensores", 138);
+  run_test(test_comparador_vectores, "test_comparador_vectores", 170);
+  run_test(test_write_char_display, "test_write_char_display", 198);
+  run_test(test_read_wiegand, "test_read_wiegand", 238);
 
   return UnityEnd();
 }

@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "stdint.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "leds.h": "c",
+        "tp_final.h": "c"
     }
 }
